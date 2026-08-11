@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Glass Clock (redirect)</title>
+  <meta name="robots" content="noindex">
+  <style>html,body{height:100%;margin:0}</style>
+</head>
+<body>
+  <div id="loader" style="display:flex;align-items:center;justify-content:center;height:100%;font-family:Arial,Helvetica,sans-serif">در حال بارگذاری...</div>
+  <script>
+    // بارگذاری محتوای فایل HTML اصلی از raw.githubusercontent و درج آن در این صفحه
+    // (روش fetch->document.write به مرورگر می‌گوید محتوای HTML خوانده‌شده را به عنوان صفحه جایگزین کند)
+    (function(){
+      var url = 'https://raw.githubusercontent.com/mahdikhadiri782-blip/Glass-Clock-/7404d050448e5e0682a8d7317c2c30a37114f5d7/glassClock_V2_1_fixed-2.html';
+      fetch(url).then(function(resp){
+        if (!resp.ok) throw new Error('fetch failed: ' + resp.status);
+        return resp.text();
+      }).then(function(html){
+        document.open();
+        document.write(html);
+        document.close();
+      }).catch(function(err){
+        console.error(err);
+        var el = document.getElementById('loader');
+        el.innerText = 'خطا هنگام بارگذاری فایل. لطفا چک کنید که فایل در مخزن موجود باشد.';
+      });
+    })();
+  </script>
+</body>
+</html>
